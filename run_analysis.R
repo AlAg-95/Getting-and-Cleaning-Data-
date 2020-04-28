@@ -29,13 +29,6 @@ X_test <- apply(X_test, 2, as.numeric)
 testing <- cbind(subject_test, y_test, X_test)
 #Merge the training and the test sets to create one data set
 df <- rbind(training, testing)
-#Identify the measurements on the mean and standard deviation for each measurement
-grep("mean\\(\\)", colnames(df), value = TRUE)
-grep("std\\(\\)", colnames(df), value = TRUE)
-
-grep("mean\\(\\)|std\\(\\)", colnames(df), value = TRUE)
-#Extract only the measurements on the mean and standard deviation for each measurement
-df <- df[,c(1:2,grep("mean\\(\\)|std\\(\\)", colnames(df)))]
 #Use descriptive activity names to name the activities in the data set
 df$Activity <- gsub("1", "WALKING",df$Activity)
 df$Activity <- gsub("2", "WALKING_UPSTAIRS",df$Activity)
@@ -43,10 +36,20 @@ df$Activity <- gsub("3", "WALKING_DOWNSTAIRS",df$Activity)
 df$Activity <- gsub("4", "SITTING",df$Activity)
 df$Activity <- gsub("5", "STANDING",df$Activity)
 df$Activity <- gsub("6", "LAYING",df$Activity)
+#Identify the measurements on the mean and standard deviation for each measurement
+grep("mean\\(\\)", colnames(df), value = TRUE)
+grep("std\\(\\)", colnames(df), value = TRUE)
+
+grep("mean\\(\\)|std\\(\\)", colnames(df), value = TRUE)
+#Extract only the measurements on the mean and standard deviation for each measurement
+df <- df[,c(1:2,grep("mean\\(\\)|std\\(\\)", colnames(df)))]
 #Appropriately label the data set with descriptive variable names
 colnames(df)
 #Tidy data set with the average of each variable for each activity and each subject
 By_Activity_Subject <- group_by(df, Activity, Subject) %>% 
   arrange(Activity, Subject) %>% 
   summarise_all("mean")
+
+write.table(By_Activity_Subject, file = "Tidy_dataset.txt", row.name=FALSE) 
+
 
