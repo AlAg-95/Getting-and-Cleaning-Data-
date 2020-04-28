@@ -31,28 +31,28 @@ producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyG
 indicate frequency domain signals). These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
- tBodyAcc-XYZ
- tGravityAcc-XYZ
- tBodyAccJerk-XYZ
- tBodyGyro-XYZ
- tBodyGyroJerk-XYZ
- tBodyAccMag
- tGravityAccMag
- tBodyAccJerkMag
- tBodyGyroMag
- tBodyGyroJerkMag
- fBodyAcc-XYZ
- fBodyAccJerk-XYZ
- fBodyGyro-XYZ
- fBodyAccMag
- fBodyAccJerkMag
- fBodyGyroMag
- fBodyGyroJerkMag
++ tBodyAcc-XYZ
++ tGravityAcc-XYZ
++ tBodyAccJerk-XYZ
++ tBodyGyro-XYZ
++ tBodyGyroJerk-XYZ
++ tBodyAccMag
++ tGravityAccMag
++ tBodyAccJerkMag
++ tBodyGyroMag
++ tBodyGyroJerkMag
++ fBodyAcc-XYZ
++ fBodyAccJerk-XYZ
++ fBodyGyro-XYZ
++ fBodyAccMag
++ fBodyAccJerkMag
++ fBodyGyroMag
++ fBodyGyroJerkMag
 
 From this set of variables the meanvalue and the standard deviation were estimated for each activity and each subject: 
 
-mean(): Mean value
-std(): Standard deviation
++ mean(): Mean value
++ std(): Standard deviation
 
 ### Variables' list
 This is the complete list of the dataset's variables.
@@ -122,8 +122,8 @@ This is the complete list of the dataset's variables.
 [64] "fBodyBodyAccJerkMag-std()"  
 [65] "fBodyBodyGyroMag-mean()"    
 [66] "fBodyBodyGyroMag-std()"     
-[67] "fBodyBodyGyroJerkMag-mean()"
-[68] "fBodyBodyGyroJerkMag-std()" 
+[67] "fBodyBodyGyroJerkMag-mean()"  
+[68] "fBodyBodyGyroJerkMag-std()"   
 
 ### Notes
 
