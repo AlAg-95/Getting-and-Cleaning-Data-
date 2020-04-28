@@ -55,7 +55,7 @@ From this set of variables the meanvalue and the standard deviation were estimat
 + std(): Standard deviation
 
 ### Variables' list
-This is the complete list of the dataset's variables.
+This is the complete list of the dataset's variables.  
  [1] "Activity"                   
  [2] "Subject"                    
  [3] "tBodyAcc-mean()-X"          
